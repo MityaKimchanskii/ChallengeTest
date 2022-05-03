@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+            <connections>
+                <outlet property="animationButton" destination="9uL-ib-Ayk" id="ldi-Bd-aNe"/>
+                <outlet property="chatButton" destination="4Fa-5D-jYS" id="WQf-Sy-Tse"/>
+                <outlet property="loginButton" destination="6JX-Lv-AOm" id="IBa-KL-U4C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="Mwe-VU-0BX">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="25g-kF-uwF" userLabel="Buttons">
+                    <rect key="frame" x="30" y="315.66666666666669" width="330" height="213.00000000000006"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-5D-jYS" userLabel="UIButton">
+                            <rect key="frame" x="0.0" y="0.0" width="330" height="55"/>
+                            <color key="backgroundColor" name="BackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Dhp-W8-PZc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="tintColor" name="FontColorDark"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                            <state key="normal" title="CHAT" image="ic_chat">
+                                <color key="titleColor" name="FontColorDark"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressChatButton:" destination="-1" eventType="touchUpInside" id="vKS-9T-LMp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-Lv-AOm" userLabel="UIButton">
+                            <rect key="frame" x="0.0" y="79" width="330" height="55"/>
+                            <color key="backgroundColor" name="BackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="9QX-2d-a45"/>
+                            </constraints>
+                            <color key="tintColor" name="FontColorDark"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                            <state key="normal" title="LOGIN" image="ic_login">
+                                <color key="titleColor" name="FontColorDark"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="vMe-dG-aNn"/>
+                            </connections>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-ib-Ayk" userLabel="UIButton">
+                            <rect key="frame" x="0.0" y="158" width="330" height="55"/>
+                            <color key="backgroundColor" name="BackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="c1u-Op-Zqc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="tintColor" name="FontColorDark"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                            <state key="normal" title="ANIMATION" image="ic_animation">
+                                <color key="titleColor" name="FontColorDark"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressAnimationButton:" destination="-1" eventType="touchUpInside" id="J6O-uG-LwS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Header-ButtonColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Mwe-VU-0BX" secondAttribute="bottom" id="5Eb-WO-sdd"/>
+                <constraint firstItem="Mwe-VU-0BX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8Uc-z4-3MH"/>
+                <constraint firstAttribute="trailing" secondItem="25g-kF-uwF" secondAttribute="trailing" constant="30" id="BfX-MZ-9Ru"/>
+                <constraint firstAttribute="trailing" secondItem="Mwe-VU-0BX" secondAttribute="trailing" id="Tio-uA-Z6B"/>
+                <constraint firstItem="Mwe-VU-0BX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ern-QN-fNL"/>
+                <constraint firstItem="25g-kF-uwF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="nPe-PH-WTX"/>
+                <constraint firstItem="25g-kF-uwF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nQC-M6-olc"/>
+            </constraints>
+            <point key="canvasLocation" x="549.23076923076917" y="312.08530805687201"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_home_menu" width="375" height="667"/>
+        <image name="ic_animation" width="23" height="24"/>
+        <image name="ic_chat" width="24" height="24"/>
+        <image name="ic_login" width="24" height="24"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColorDark">
+            <color red="0.10599999874830246" green="0.11800000071525574" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Header-ButtonColor">
+            <color red="0.054999999701976776" green="0.36100000143051147" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

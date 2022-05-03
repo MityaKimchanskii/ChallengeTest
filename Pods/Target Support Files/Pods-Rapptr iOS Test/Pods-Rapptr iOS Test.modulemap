@@ -1,0 +1,6 @@
+module Pods_Rapptr_iOS_Test {
+  umbrella header "Pods-Rapptr iOS Test-umbrella.h"
+
+  export *
+  module * { export * }
+}
