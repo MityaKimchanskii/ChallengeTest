@@ -1,13 +1,42 @@
-Hello!
+# Challenge
 
-Your task is to use the provided project to create the iOS app displayed in the provided PDF.
+Submitted by: **Dmityrii Kim**
 
-You will find more detailed instructions as comments inside of the project.
+* [+] REST API
+* [+] Animation
+* [+] CocoaPods
 
-All required design assets are already inside of the provided project.
+## Video Walkthrough
 
-Bonus Points:
-- Show you can create UI and Auto Layout programmatically as well as through Storyboard/Interface Builder
-- Show us you can add Cocoapods to this project. We will allow the use of one single pod.
+<img src='https://github.com/MityaKimchanskii/ChallengeTest/blob/main/CodinTask.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Good luck!
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Notes
+
+Describe any challenges encountered while building the app.
+
+## License
+
+    Copyright 2022 Dmitrii Kim
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    
+  
+    
+
+    
+  
+    
+
+

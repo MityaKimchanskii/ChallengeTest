@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="uOY-bE-Lwa">
-                    <rect key="frame" x="30" y="129" width="354" height="213"/>
+                    <rect key="frame" x="30" y="144" width="354" height="213"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Sh-ZA6" userLabel="UITextField">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="55"/>
@@ -65,7 +65,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="uOY-bE-Lwa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="0j3-Ag-kCn"/>
-                <constraint firstItem="uOY-bE-Lwa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="129" id="7lU-Cd-u5t"/>
+                <constraint firstItem="uOY-bE-Lwa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="144" id="7lU-Cd-u5t"/>
                 <constraint firstAttribute="trailing" secondItem="Jkw-tP-WEh" secondAttribute="trailing" id="IVV-cp-fDZ"/>
                 <constraint firstItem="Jkw-tP-WEh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OZr-BT-FZg"/>
                 <constraint firstAttribute="bottom" secondItem="Jkw-tP-WEh" secondAttribute="bottom" id="QC9-D9-mWh"/>
