@@ -13,7 +13,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var messages: [Message] = []
   
     // MARK: - IBOutlets
-    @IBOutlet weak var chatTable: UITableView!
+    @IBOutlet weak var chatTableView: UITableView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -25,10 +25,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: ChatTableViewCell? = nil
-        if cell == nil {
-            let nibs = Bundle.main.loadNibNamed("ChatTableViewCell", owner: self, options: nil)
-            cell = nibs?[0] as? ChatTableViewCell
-        }
+        
+        let nibs = Bundle.main.loadNibNamed("ChatTableViewCell", owner: self, options: nil)
+        cell = nibs?[0] as? ChatTableViewCell
         
         guard let cell = cell else { return UITableViewCell() }
 
@@ -41,29 +40,28 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // MARK: - Helper Methods
-    func configureTable(tableView: UITableView) {
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
-        tableView.tableFooterView = UIView(frame: .zero)
+    func configureTable() {
+        chatTableView.dataSource = self
+        chatTableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
+        chatTableView.tableFooterView = UIView(frame: .zero)
     }
     
     func updateViews() {
         title = "Chat"
-        messages = [Message]()
-        configureTable(tableView: chatTable)
+        configureTable()
     }
     
     func fetchData() {
-        ChatClient.fetchChatData { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let messages):
-                    self.messages = messages
-                    self.chatTable.reloadData()
-                case .failure(let error):
-                    print(error)
-                    print(error.localizedDescription)
+        ChatClient.fetchChatData { [weak self] result in
+            switch result {
+            case .success(let messages):
+                DispatchQueue.main.async {
+                    self?.messages = messages
+                    self?.chatTableView.reloadData()
                 }
+            case .failure(let error):
+                print(error)
+                print(error.localizedDescription)
             }
         }
     }

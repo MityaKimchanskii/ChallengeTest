@@ -9,8 +9,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - Lifecycle
@@ -22,17 +22,17 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     @IBAction func didPressLoginButton(_ sender: Any) {
         
-        guard let email = emailTF.text, !email.isEmpty,
-              let password = passwordTF.text, !password.isEmpty else { return }
+        guard let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else { return }
         
-        LoginClient.login(email: email, password: password) { (message) in
+        LoginClient.login(email: email, password: password) { [weak self] (message) in
             
             DispatchQueue.main.async {
                 let alert = UIAlertController(title: "Login is successful!", message: "\(message)\n", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
-                    self.navigationController?.popToRootViewController(animated: true)})
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    self?.navigationController?.popToRootViewController(animated: true)})
                 alert.addAction(okAction)
-                self.present(alert, animated: true)
+                self?.present(alert, animated: true)
             }
         }
     }

@@ -10,20 +10,16 @@ import SDWebImage
 class ChatTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var header: UILabel!
-    @IBOutlet weak var body: UILabel!
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var messageView: UIView!
-    
-    // MARK: - Properties
-    var message: Message?
     
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
     }
-    
 
     // MARK: - Helper Methods
     func setupViews() {
@@ -32,8 +28,8 @@ class ChatTableViewCell: UITableViewCell {
     }
     
     func fillCell(message: Message) {
-        header.text = message.username
-        body.text = message.text
+        headerLabel.text = message.username
+        bodyLabel.text = message.text
         profileImageView.sd_setImage(with: message.avatarURL)
     }
 }
